@@ -1,220 +1,471 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gizlilik Politikası — ChessMeta Game</title>
+<title>Gizlilik Politikası - ChessMeta Game</title>
+
 <style>
-  :root {
-    --text: #1c1c1e;
-    --muted: #55555a;
-    --bg: #ffffff;
-    --accent: #2f6f4f;
-    --border: #e4e4e7;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #f5f5f4;
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.65;
-  }
+:root {
+  --text: #1c1c1e;
+  --muted: #5f6368;
+  --bg: #f5f5f4;
+  --card: #ffffff;
+  --accent: #2f6f4f;
+  --border: #e1e3e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.65;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--card);
+  min-height: 100vh;
+  padding: 48px 42px 64px;
+}
+
+header {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+h2 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-top: 34px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
+
+p,
+li {
+  font-size: 0.97rem;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+a {
+  color: var(--accent);
+  word-break: break-word;
+}
+
+.info-box {
+  background: #f0f4f2;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 15px 18px;
+  margin: 18px 0;
+}
+
+.contact-box {
+  background: #f0f4f2;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 12px;
+}
+
+.contact-box p {
+  margin: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f0f4f2;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+@media (max-width: 600px) {
   .page {
-    max-width: 760px;
-    margin: 0 auto;
-    background: var(--bg);
-    padding: 48px 40px 64px;
-    min-height: 100vh;
+    padding: 32px 20px 48px;
   }
-  @media (max-width: 600px) {
-    .page { padding: 32px 20px 48px; }
-  }
-  header {
-    border-bottom: 3px solid var(--accent);
-    padding-bottom: 20px;
-    margin-bottom: 32px;
-  }
+
   header h1 {
-    font-size: 1.9rem;
-    margin: 0 0 6px;
+    font-size: 1.55rem;
   }
-  header p.meta {
-    color: var(--muted);
-    font-size: 0.92rem;
-    margin: 0;
-  }
-  h2 {
-    font-size: 1.2rem;
-    margin-top: 36px;
-    margin-bottom: 10px;
-    color: var(--accent);
-    border-left: 4px solid var(--accent);
-    padding-left: 10px;
-  }
-  p, li { color: var(--text); font-size: 0.98rem; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 6px; }
+
   table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 14px 0 6px;
-    font-size: 0.92rem;
+    display: block;
+    overflow-x: auto;
   }
-  th, td {
-    border: 1px solid var(--border);
-    padding: 8px 10px;
-    text-align: left;
-    vertical-align: top;
-  }
-  th {
-    background: #f0f4f2;
-    font-weight: 600;
-  }
-  a { color: var(--accent); }
-  .contact-box {
-    background: #f0f4f2;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin-top: 12px;
-  }
-  .contact-box p { margin: 4px 0; }
-  footer {
-    margin-top: 48px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.85rem;
-  }
+}
 </style>
+
 </head>
+
 <body>
+
 <div class="page">
 
-  <header>
-    <h1>Gizlilik Politikası — ChessMeta Game</h1>
-    <p class="meta">Yürürlük tarihi: 29 Ağustos 2026 &nbsp;·&nbsp; Geliştirici: @aykutsen1987</p>
-  </header>
+<header>
+  <h1>Gizlilik Politikası - ChessMeta Game</h1>
+  <p class="meta">
+    Yürürlük tarihi: 29 Ağustos 2026 · Geliştirici: @aykutsen1987
+  </p>
+</header>
+
+<p>
+Bu Gizlilik Politikası, <strong>ChessMeta Game</strong> mobil uygulamasını
+("Uygulama") kullanan kişilerin verilerinin nasıl işlendiğini açıklar.
+Uygulamanın temel oyun özellikleri için kullanıcı hesabı oluşturulması
+zorunlu değildir.
+</p>
+
+<h2>1. Veri Sorumlusu</h2>
+
+<p>
+ChessMeta Game, bağımsız geliştirici <strong>@aykutsen1987</strong> tarafından
+geliştirilmekte ve yayınlanmaktadır.
+</p>
+
+<p>
+Gizlilik ve veri işleme uygulamalarıyla ilgili sorularınız için aşağıdaki
+iletişim adresinden bizimle iletişime geçebilirsiniz.
+</p>
+
+<h2>2. Toplanan ve İşlenen Veriler</h2>
+
+<p>
+ChessMeta Game, kullanıcıdan doğrudan ad, soyad, telefon numarası veya
+fiziksel adres gibi kimlik bilgileri istemez. Bununla birlikte reklam
+hizmetlerinin ve çevrimiçi oyun özelliklerinin çalışması sırasında bazı
+teknik bilgiler işlenebilir.
+</p>
+
+<table>
+<tr>
+  <th>Veri türü</th>
+  <th>Kullanım amacı</th>
+  <th>Kaynak</th>
+</tr>
+
+<tr>
+  <td>Reklam Kimliği (GAID)</td>
+  <td>
+    Reklamların sunulması, reklam performansının ölçülmesi,
+    reklamların kişiselleştirilmesi ve reklam sahtekârlığının
+    önlenmesi.
+  </td>
+  <td>
+    Unity LevelPlay SDK ve LevelPlay üzerinden kullanılan reklam
+    ağı sağlayıcıları
+  </td>
+</tr>
+
+<tr>
+  <td>Cihaz bilgileri</td>
+  <td>
+    Reklam sunumu, uygulama performansının değerlendirilmesi,
+    hata tespiti, güvenlik ve dolandırıcılığın önlenmesi.
+  </td>
+  <td>
+    Unity LevelPlay SDK ve reklam ağı sağlayıcıları
+  </td>
+</tr>
+
+<tr>
+  <td>IP adresi ve bağlantı bilgileri</td>
+  <td>
+    Çevrimiçi çok oyunculu bağlantının kurulması, eşleştirme,
+    gerçek zamanlı oyun iletişimi ve güvenlik.
+  </td>
+  <td>
+    ChessMeta Game çevrimiçi oyun sunucusu
+  </td>
+</tr>
+
+<tr>
+  <td>Oyun ilerlemesi ve oyun istatistikleri</td>
+  <td>
+    Oyun ilerlemesinin, ayarların ve istatistiklerin çalışmasını sağlamak.
+  </td>
+  <td>
+    Cihazınızda yerel olarak saklanır.
+  </td>
+</tr>
+</table>
+
+<h2>3. Unity LevelPlay ve Reklamlar</h2>
+
+<p>
+ChessMeta Game, uygulama içerisinde reklam göstermek için
+<strong>Unity LevelPlay (ironSource) Mediation SDK</strong> kullanır.
+</p>
+
+<p>
+Unity LevelPlay, farklı reklam ağı sağlayıcılarından reklamların
+uygulama içerisinde gösterilmesini sağlayan bir reklam aracılık
+platformudur.
+</p>
+
+<p>
+Reklam hizmetlerinin sağlanması ve ölçümlenmesi amacıyla reklam
+kimliği, cihaz bilgileri, IP adresi ve benzeri teknik bilgiler
+LevelPlay veya LevelPlay üzerinden çalışan reklam ağı sağlayıcıları
+tarafından işlenebilir.
+</p>
+
+<p>
+Bu üçüncü taraf sağlayıcıların veri işleme uygulamaları kendi
+gizlilik politikalarına tabidir.
+</p>
+
+<p>
+Unity'nin gizlilik politikası hakkında daha fazla bilgi için:
+</p>
+
+<ul>
+  <li>
+    <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+       target="_blank"
+       rel="noopener noreferrer">
+      Unity Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası
+    </a>
+  </li>
+</ul>
+
+<h2>4. Ödüllü Reklamlar</h2>
+
+<p>
+Uygulamada ödüllü reklam özelliği bulunuyorsa, ödüllü reklam yalnızca
+kullanıcının oyun içerisindeki ilgili ödüllü reklam veya ipucu
+seçeneğini seçmesiyle başlatılır.
+</p>
+
+<p>
+Kullanıcı ödüllü reklamı başlatmak zorunda değildir.
+</p>
+
+<h2>5. Çevrimiçi Çok Oyunculu Mod</h2>
+
+<p>
+ChessMeta Game çevrimiçi çok oyunculu özellikleri kullanıldığında,
+oyuncuların hamlelerini ve maç bilgilerini gerçek zamanlı olarak
+iletmek için internet bağlantısı kullanılır.
+</p>
+
+<p>
+Bu bağlantı sırasında IP adresi ve teknik bağlantı bilgileri,
+bağlantının kurulması, oyuncuların eşleştirilmesi, maçın yürütülmesi
+ve güvenliğin sağlanması amacıyla geçici olarak işlenebilir.
+</p>
+
+<p>
+ChessMeta Game, kullanıcı hesabına bağlı kalıcı bir kişisel profil
+oluşturmaz.
+</p>
+
+<h2>6. Cihazda Saklanan Veriler</h2>
+
+<p>
+Oyun ilerlemesi, oyun istatistikleri, oyun ayarları ve benzeri
+uygulama verileri cihazınızda yerel olarak saklanabilir.
+</p>
+
+<p>
+Bu veriler temel oyun işlevlerinin çalışması amacıyla kullanılır ve
+normal oyun kullanımı kapsamında sunucuya gönderilmez.
+</p>
+
+<h2>7. Veri Paylaşımı</h2>
+
+<p>
+ChessMeta Game, kullanıcıların kişisel bilgilerini satmaz veya
+kiralamaz.
+</p>
+
+<p>
+Bununla birlikte reklamların gösterilmesi ve çevrimiçi çok oyunculu
+özelliklerin sağlanması için gerekli teknik veriler, ilgili hizmet
+sağlayıcıları tarafından kendi hizmet koşulları ve gizlilik
+politikaları kapsamında işlenebilir.
+</p>
+
+<h2>8. Veri Güvenliği ve Saklama</h2>
+
+<p>
+Verilerin güvenliğini sağlamak amacıyla makul teknik ve idari
+önlemler uygulanmaktadır.
+</p>
+
+<p>
+Çevrimiçi oyun bağlantısı kapsamında işlenen teknik bağlantı
+bilgileri, hizmetin çalışması için gerekli olduğu sürece işlenebilir.
+Uygulama tarafından kalıcı bir kullanıcı profili oluşturulması
+amaçlanmamaktadır.
+</p>
+
+<p>
+Üçüncü taraf reklam sağlayıcılarının saklama süreleri ilgili
+sağlayıcıların kendi politikalarına göre belirlenir.
+</p>
+
+<h2>9. Çocukların Gizliliği</h2>
+
+<p>
+ChessMeta Game genel kullanıma yönelik bir satranç oyunudur.
+Uygulama, bilerek çocuklardan doğrudan kişisel bilgi toplamayı
+amaçlamaz.
+</p>
+
+<p>
+Bir ebeveyn veya yasal vasi, çocuğunun uygulama aracılığıyla bize
+kişisel bilgi sağladığını düşünüyorsa aşağıdaki iletişim adresinden
+bizimle iletişime geçebilir.
+</p>
+
+<p>
+Geçerli mevzuat kapsamında gerekli olması halinde ilgili verilerin
+silinmesi için uygun işlemler yapılacaktır.
+</p>
+
+<h2>10. Kullanıcı Hakları</h2>
+
+<p>
+Bulunduğunuz ülkeye ve yürürlükteki mevzuata bağlı olarak kişisel
+verilerinizle ilgili aşağıdaki haklara sahip olabilirsiniz:
+</p>
+
+<ul>
+  <li>İşlenen veriler hakkında bilgi isteme,</li>
+  <li>Yanlış veya eksik verilerin düzeltilmesini isteme,</li>
+  <li>Uygulanabilir durumlarda verilerin silinmesini isteme,</li>
+  <li>Belirli veri işleme faaliyetlerine itiraz etme,</li>
+  <li>Uygulanabilir durumlarda veri işlemeyi sınırlandırma.</li>
+</ul>
+
+<p>
+Türkiye'de kişisel verilerin korunmasına ilişkin haklar 6698 sayılı
+Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında değerlendirilebilir.
+Avrupa Birliği veya Avrupa Ekonomik Alanı'nda bulunan kullanıcılar için
+uygulanabilir olduğu ölçüde GDPR kapsamındaki haklar geçerli olabilir.
+</p>
+
+<h2>11. Reklam Tercihleri</h2>
+
+<p>
+Kullanıcılar, Android cihazlarının reklam ve gizlilik ayarları
+üzerinden kişiselleştirilmiş reklamlarla ilgili tercihlerini
+yönetebilir.
+</p>
+
+<p>
+Kullanılabilir seçenekler cihaz modeline, Android sürümüne ve
+Google hizmetlerinin yapılandırmasına göre değişebilir.
+</p>
+
+<h2>12. Üçüncü Taraf Hizmetler</h2>
+
+<p>
+ChessMeta Game'in kullandığı üçüncü taraf hizmet sağlayıcıları,
+kendi hizmetlerini sunmak amacıyla belirli teknik verileri
+işleyebilir.
+</p>
+
+<p>
+Bu sağlayıcıların veri işleme uygulamaları kendi güncel gizlilik
+politikalarına tabidir.
+</p>
+
+<div class="info-box">
+  <strong>Üçüncü taraf gizlilik politikası:</strong>
+  Unity LevelPlay ve LevelPlay üzerinden kullanılan reklam ağı
+  sağlayıcıları tarafından gerçekleştirilen veri işleme faaliyetleri,
+  ilgili sağlayıcıların kendi gizlilik politikalarına tabidir.
+</div>
+
+<h2>13. Gizlilik Politikasındaki Değişiklikler</h2>
+
+<p>
+Bu Gizlilik Politikası gerektiğinde güncellenebilir. Değişiklikler
+bu sayfada yayınlanır ve yürürlük tarihi güncellenir.
+</p>
+
+<p>
+Önemli değişiklikler olması halinde, uygulanabilir olduğu ölçüde
+uygun yöntemlerle kullanıcılar bilgilendirilebilir.
+</p>
+
+<h2>14. İletişim</h2>
+
+<div class="contact-box">
+  <p><strong>Geliştirici:</strong> @aykutsen1987</p>
 
   <p>
-    Bu Gizlilik Politikası, <strong>ChessMeta Game</strong> mobil satranç oyununu ("Uygulama") kullandığınızda
-    hangi verilerin toplandığını, nasıl kullanıldığını ve haklarınızın neler olduğunu açıklar.
-    Uygulamayı indirip kullanarak bu politikada açıklanan uygulamaları kabul etmiş olursunuz.
+    <strong>E-posta:</strong>
+    <a href="mailto:aykutsen1987@gmail.com">
+      aykutsen1987@gmail.com
+    </a>
   </p>
+</div>
 
-  <h2>1. Veri Sorumlusu</h2>
-  <p>
-    Uygulama, bağımsız geliştirici <strong>@aykutsen1987</strong> tarafından geliştirilmekte ve
-    yayınlanmaktadır. Gizlilikle ilgili tüm sorularınız için aşağıdaki iletişim bilgilerini
-    kullanabilirsiniz.
-  </p>
-
-  <h2>2. Toplanan Veriler</h2>
-  <p>ChessMeta Game, kullanıcı hesabı oluşturmanızı istemez ve isim, adres, telefon numarası gibi
-     kişisel kimlik bilgilerini doğrudan talep etmez. Uygulamanın çalışması sırasında aşağıdaki
-     veriler dolaylı olarak işlenebilir:</p>
-
-  <table>
-    <tr><th>Veri türü</th><th>Amaç</th><th>Kaynak</th></tr>
-    <tr>
-      <td>Reklam Kimliği (GAID) ve Google App Set ID</td>
-      <td>Reklamların gösterilmesi, ölçümlenmesi ve kötüye kullanımın (sahte tıklama vb.)
-          önlenmesi</td>
-      <td>Unity LevelPlay (ironSource) reklam aracılık SDK'sı ve bu SDK üzerinden
-          çalışan reklam ağı ortakları</td>
-    </tr>
-    <tr>
-      <td>Cihaz ve uygulama bilgileri (işletim sistemi sürümü, cihaz modeli, dil, saat dilimi,
-          IP adresinden türetilen yaklaşık konum)</td>
-      <td>Reklam sunumu, hata ayıklama, dolandırıcılık tespiti</td>
-      <td>Unity LevelPlay ve aracılık ettiği reklam ağları</td>
-    </tr>
-    <tr>
-      <td>Bağlantı verisi (IP adresi, oturum kimliği)</td>
-      <td>Çevrimiçi çok oyunculu modda rakip eşleştirme ve gerçek zamanlı hamle iletimi</td>
-      <td>Uygulamanın kendi çok oyunculu sunucusu (WebSocket bağlantısı)</td>
-    </tr>
-    <tr>
-      <td>Oyun ilerlemesi, istatistikler ve başarımlar</td>
-      <td>Oyun içi istatistik/başarım ekranının çalışması</td>
-      <td>Yalnızca cihazınızda yerel olarak saklanır; sunucuya gönderilmez</td>
-    </tr>
-  </table>
-
-  <h2>3. Reklamlar ve Üçüncü Taraf Hizmetler</h2>
-  <p>
-    Uygulama, reklam göstermek için <strong>Unity LevelPlay (ironSource) Mediation SDK</strong>'sını
-    kullanır. Bu SDK, reklam gösterebilmek amacıyla farklı reklam ağı ortaklarını (ör. Google AdMob
-    ve benzeri ağlar) aynı anda çalıştırabilir. Bu ortaklar, reklamları kişiselleştirmek ve
-    performanslarını ölçmek için kendi gizlilik politikalarına tabi olarak veri işleyebilir.
-    Detaylı bilgi için:
-  </p>
-  <ul>
-    <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası</a></li>
-    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası (AdMob için)</a></li>
-  </ul>
-  <p>
-    Ödüllü reklam (rewarded ad) yalnızca siz oyun içindeki ipucu butonuna bastığınızda gösterilir;
-    zorla veya bilginiz dışında oynatılmaz.
-  </p>
-
-  <h2>4. Çevrimiçi Çok Oyunculu Mod</h2>
-  <p>
-    Çevrimiçi çok oyunculu özelliği, hamlelerinizi ve eşleştirme bilgilerinizi gerçek zamanlı olarak
-    iletmek için kendi sunucumuza (WebSocket bağlantısı) geçici bir bağlantı kurar. Bu bağlantı
-    sırasında IP adresiniz sunucu tarafından, yalnızca bağlantının ve maçın yürütülmesi amacıyla
-    işlenir; kalıcı olarak saklanmaz veya üçüncü taraflarla paylaşılmaz.
-  </p>
-
-  <h2>5. Çocukların Gizliliği</h2>
-  <p>
-    ChessMeta Game, genel kitleye yönelik bir satranç oyunudur ve bilerek 13 yaşın altındaki çocuklardan
-    kişisel veri toplamayı amaçlamaz. Uygulamanın çocuklara özel olarak pazarlanan bir sürümünde
-    reklamlar, ilgili mevzuata (ör. COPPA) uygun olarak kişiselleştirilmemiş şekilde sunulacaktır.
-    Bir ebeveyn veya vası olarak, çocuğunuzun bize kişisel veri sağladığını düşünüyorsanız lütfen
-    bizimle iletişime geçin; ilgili veriyi derhal sileriz.
-  </p>
-
-  <h2>6. Veri Güvenliği ve Saklama</h2>
-  <p>
-    Reklam ve bağlantı verileri, yalnızca yukarıda belirtilen amaçlar için gerekli olduğu sürece
-    işlenir. Uygulama kendi sunucularında kişisel bir kullanıcı profili tutmaz. Üçüncü taraf reklam
-    SDK'ları tarafından işlenen veriler, ilgili sağlayıcının kendi güvenlik standartlarına tabidir.
-  </p>
-
-  <h2>7. Haklarınız (KVKK / GDPR)</h2>
-  <p>
-    Bulunduğunuz ülkeye bağlı olarak (Türkiye'de 6698 sayılı KVKK, Avrupa Birliği'nde GDPR
-    kapsamında) aşağıdaki haklara sahip olabilirsiniz:
-  </p>
-  <ul>
-    <li>İşlenen verileriniz hakkında bilgi talep etme,</li>
-    <li>Verilerinizin düzeltilmesini veya silinmesini isteme,</li>
-    <li>Reklam kişiselleştirmesine itiraz etme (cihazınızın reklam ayarlarından "reklam kişiselleştirmeyi sınırla" seçeneğini açarak),</li>
-    <li>Bu politika kapsamındaki işlemeye ilişkin şikâyette bulunma.</li>
-  </ul>
-  <p>Bu haklarınızı kullanmak için aşağıdaki iletişim bilgilerinden bize ulaşabilirsiniz.</p>
-
-  <h2>8. Politika Değişiklikleri</h2>
-  <p>
-    Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler bu sayfada
-    yayınlanacak ve sayfanın en üstündeki "Yürürlük tarihi" güncellenecektir. Uygulamayı kullanmaya
-    devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.
-  </p>
-
-  <h2>9. İletişim</h2>
-  <div class="contact-box">
-    <p><strong>Geliştirici:</strong> @aykutsen1987</p>
-    <p><strong>E-posta:</strong> <a href="mailto:aykutsen1987@gmail.com">aykutsen1987@gmail.com</a></p>
-  </div>
-
-  <footer>
-    Bu belge genel bir şablon olarak hazırlanmıştır ve hukuki danışmanlık yerine geçmez.
-    Google Play mağaza kaydınız ve faaliyet gösterdiğiniz ülkelerin mevzuatı (KVKK, GDPR, COPPA vb.)
-    açısından bir hukuk danışmanına gözden geçirtmeniz önerilir.
-  </footer>
+<footer>
+  © 2026 @aykutsen1987 - ChessMeta Game<br>
+  Bu Gizlilik Politikası bilgilendirme amacıyla hazırlanmıştır.
+</footer>
 
 </div>
+
 </body>
 </html>
